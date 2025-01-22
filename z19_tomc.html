@@ -1,0 +1,25 @@
+ <html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+  <script type="text/javascript">
+    function pole_tomcz() {
+      var a_tym = parseFloat(document.getElementById('dlugosc').value);
+      var b_tym = a_tym * a_tym;
+      document.getElementById("nazwa").innerHTML = "Pole kwadratu= " + b_tym.toFixed(2) + " cm^2";
+    }
+    function obwod_tomcz() {
+      var a = parseFloat(document.getElementById('dlugosc').value);
+      var b = 4 * a;
+      document.getElementById("nazwa").innerHTML = "Obwód kwadratu= " + b.toFixed(2) + " cm";
+    }
+  </script>
+  <h1>Wszystko o KWADRACIE</h1><br><br>
+  Podaj długość boku: <input type="text" id="dlugosc" placeholder="podaj długość"> cm<br><br><br>
+  <input type="button" name="pole" value="Oblicz pole" Onclick="pole_tomcz()"><br><br>
+  <input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_tomcz()"><br><br>
+  <div style="color:red;font-size:50px;" id="nazwa"></div>
+</body>
+</html>
