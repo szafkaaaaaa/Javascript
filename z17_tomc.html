@@ -1,0 +1,72 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <title> proste obliczenia</title>
+      <meta charset="utf-8">
+      <style>
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+    </head>
+    <body>
+      <h2>1. Cztery sposoby wyjścia danych na stronę w JS:</h2>
+  <ul>
+      <li>za pomocą <code>document.write()</code></li>
+      <li>za pomocą okienka <code>alert()</code></li>
+      <li>do pól formularza</li>
+      <li>do tabeli</li>
+  </ul>
+  
+  <h2>2. Funkcja w JS:</h2>
+  <ul>
+      <li>To zbiór grupowanych instrukcji, które można wywołać po nazwie.</li>
+      <li>Podczas wywołania wykonuje swój wewnętrzny kod.</li>
+      <li>Może mieć argumenty przekazywane do funkcji.</li>
+      <li>Może zwracać wartość za pomocą słowa kluczowego <code>return</code>.</li>
+  </ul>
+  
+  <h2>3. Wybrane metody obiektu document:</h2>
+  <table>
+      <tr>
+          <th>Metoda</th>
+          <th>Opis</th>
+      </tr>
+      <tr>
+          <td><code>getElementById("id")</code></td>
+          <td>Dostęp do elementu o konkretnej wartości atrybutu id.</td>
+      </tr>
+      <tr>
+          <td><code>getElementsByTagName("znacznik")</code></td>
+          <td>Dostęp do wszystkich elementów danego typu znacznika, np. P lub DIV.</td>
+      </tr>
+      <tr>
+          <td><code>getElementsByName("nazwa")</code></td>
+          <td>Dostęp do wszystkich elementów o konkretnej wartości atrybutu name.</td>
+      </tr>
+  </table>
+  
+  <h2>4. Właściwości elementów:</h2>
+  <ul>
+      <li><strong>innerHTML</strong>: Pozwala czytać, modyfikować, wstawiać lub usuwać kod HTML z danego elementu HTML.</li>
+      <li><strong>innerText</strong>: Określa ciąg znaków, który zostanie umieszczony w elemencie.</li>
+      <li><strong>className</strong>: Określa klasę CSS używaną do prezentacji elementu.</li>
+  </ul>
+  
+  <h2>Przykład:</h2>
+  <pre>
+  <!DOCTYPE html>
+  ...
+  <div id="nazwa"></div>
+  <script>
+  document.getElementById("nazwa").innerHTML = "Witaj";
+  document.getElementById("nazwa").className = "wyróżnienieCzerwone";
+  </script>
+  ...
+  </pre>
+      <input type="button" value="zamknij okno" onclick="window.close()"/>
+    </body>
+  </html>
