@@ -1,0 +1,62 @@
+  <html>
+
+    <head>
+      <title>
+        Obliczenia pola i obwodu
+      </title>
+      <script language="JavaScript">
+        function poleTomc(atom, btom) {
+          return atom * btom;
+        }
+    
+        function obwodTomc(atom, btom) {
+          return 2 * (atom + btom);
+        }
+    
+        function calcPoleObwod(event) {
+          event.preventDefault();
+    
+          const aMys = parseFloat(document.querySelector('[name="a_dana_tom"]').value);
+          const bMys = parseFloat(document.querySelector('[name="b_dana_tom"]').value);
+    
+          const pole = poleTomc(atom, btom);
+          const obwod = obwodTomc(atom, btom);
+    
+          const poleOutput = document.querySelector('#wyprowadz_pole');
+          const obwodOutput = document.querySelector('#wyprowadz_obwod');
+    
+          poleOutput.textContent = pole;
+          obwodOutput.textContent = obwod;
+        }
+      </script>
+    </head>
+    
+    <body>
+      <h1>Obliczenia obwodu i pola prostokąta</h1>
+      <br> <br>
+      <form name="formularz" action="#" onsubmit="calcPoleObwod(event); return false;">
+        <label>
+          Podaj a=
+          <input type="number" step="0.001" name="a_dana_tom">
+        </label>
+    
+        <label>
+          Podaj b=
+          <input type="number" step="0.001" name="b_dana_tom">
+        </label>
+    
+        <input TYPE="submit" Value="oblicz">
+      </form>
+    
+      <table>
+        <tr>
+          <th>Pole = </th>
+          <td id="wyprowadz_pole"></td>
+        </tr>
+        <tr>
+          <th>Obwod = </th>
+          <td id="wyprowadz_obwod"></td>
+        </tr>
+      </table>
+    </body>
+    </html>
