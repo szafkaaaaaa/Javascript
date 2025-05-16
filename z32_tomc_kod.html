@@ -1,0 +1,77 @@
+<html>
+<head>
+  <title> kod zadania 32</title>
+  <meta charset="utf-8">
+  <style>
+    textarea {
+      color: rgb(102, 102, 102);
+      font-size: 15px;
+      resize: none;
+      height: 90vh;
+      width: 90vw;
+    }
+  </style>
+</head>
+<body>
+  <textarea readonly>
+     <html>
+<body>
+  <div class="train-info">
+    <script type="text/javascript">
+      function Train(name, color, model, wheelsNumber) {
+        this.name = name;
+        this.color = color;
+        this.model = model;
+        this.wheelsNumber = wheelsNumber;
+      }
+
+      Train.prototype.productionYear = 2005;
+      Train.prototype.getInfo = function () {
+        alert(
+          'Name: ' + this.name
+          + '\nColor: ' + this.color
+          + '\nModel: ' + this.model
+          + '\nWheels Number: ' + this.wheelsNumber
+        );
+      };
+
+      const firstTrain = new Train(
+        'Express Lightning',
+        'Blue',
+        'X2000',
+        16,
+      );
+
+      const secondTrain = new Train(
+        'Sunset Voyager',
+        'Red',
+        'SV-8',
+        8,
+      );
+
+      const thirdTrain = new Train(
+        'Midnight Explorer',
+        'Black',
+        'MX-10',
+        10,
+      );
+
+      firstTrain.getInfo();
+      secondTrain.getInfo();
+      thirdTrain.getInfo();
+
+      firstTrain.broken = true;
+      firstTrain.pokaz_Tomcz = function () {
+        const { name, broken } = this;
+
+        alert(`Train ${name}, broken: ${broken}`);
+      };
+
+      firstTrain.pokaz_Tomcz();
+    </script>
+  </div>
+</body>
+</html>
+    </textarea>
+</body>
+</html>
