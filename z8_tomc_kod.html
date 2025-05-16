@@ -1,0 +1,44 @@
+<html>
+<head>
+  <title> kod zadania 2</title>
+  <meta charset="utf-8">
+  <style>
+    textarea {
+      color: rgb(102, 102, 102);
+      font-size: 15px;
+      resize: none;
+      height: 90vh;
+      width: 90vw;
+    }
+  </style>
+</head>
+<body>
+  <textarea readonly>
+       <!DOCTYPE html>
+      <html>
+      <head>
+        <link rel="stylesheet" href="z8.css">
+        <script type="text/javascript">
+          function show_confirm() {
+            var r = confirm("Naciśnij klawisz");
+            if (r == true) {
+              document.write("Nacisnąłeś OK!");
+            } else {
+              document.write("Nacisnąłeś Cancel!");
+            }
+          } 
+        </script>
+      </head>
+      
+      <body>
+        <h3>Zastosowanie:</h3>
+        <p>Jest używany, jeśli chcemy zapytać użytkownika o weryfikacje, lub akceptację jakichś danych.
+          Użytkownik musi nacisnąć „OK.” w celu akceptacji bądź „Cancel” w celu odrzucenia. Jeżeli zostanie
+          wybrane „OK.” metoda zwraca true w przeciwnym wypadku false. </p>
+        <input type="button" onclick="show_confirm()" value="Pokaż confirm box" />
+        <input type="button" value="zamknij okno" onclick="window.close()" />
+      </body>
+      </html>
+    </textarea>
+</body>
+</html>
