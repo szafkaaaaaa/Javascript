@@ -1,0 +1,55 @@
+<html>
+<head>
+  <title> kod zadanie 1</title>
+  <meta charset="utf-8">
+  <style>
+    textarea {
+      color: rgb(102, 102, 102);
+      font-size: 15px;
+      resize: none;
+      height: 90vh;
+      width: 90vw;
+    }
+  </style>
+</head>
+<body>
+  <textarea readonly>
+     <!DOCTYPE html>
+<html lang="pl-PL">
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Osadzanie pliku</title>
+  </head>
+  <body>
+    <script>
+      const nameSpaces = "&nbsp;".repeat(18);
+      const surnameSpaces = "&nbsp;".repeat(21);
+
+      document.write(
+      "&".repeat(19).fontcolor("#00FF00") 
+      + "<br>"
+      );
+      document.write(
+      "&".fontcolor("#00FF00")
+      + `${nameSpaces}Tymon${nameSpaces}`.fontcolor("#C0C0C0")
+      + "&".fontcolor("#00FF00")
+      + "<br>"
+      );
+      document.write(
+      "&".fontcolor("#00FF00")
+      + `${surnameSpaces}Tomczak${surnameSpaces}`.fontcolor("#C0C0C0")
+      + "&".fontcolor("#00FF00")
+      + "<br>"
+      );
+      document.write(
+"&".repeat(19).fontcolor("#00FF00") 
++ "<br>"
+);
+    </script>
+    <input type="button" value="zamknij okno" onclick="window.close()"/>
+  </body>
+</html>
+    </textarea>
+</body>
+</html>
