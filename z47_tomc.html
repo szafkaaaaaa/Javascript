@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Sprawdzenie danych </title>
+</head>
+<body>
+    <div style="color:red; font-size:50px;">
+        <script language="JavaScript">
+            let a_tomc, b_tomc, c_tomc;
+
+            do {
+                let liczba1 = prompt("Podaj bok a_tomc:", "");
+                a_tomc = parseFloat(liczba1);
+
+                let liczba2 = prompt("Podaj bok b_tomc:", "");
+                b_tomc = parseFloat(liczba2);
+
+                let liczba3 = prompt("Podaj bok c_tomc:", "");
+                c_tomc = parseFloat(liczba3);
+            } while (
+                !(a_tomc > 0 && b_tomc > 0 && c_tomc > 0 && 
+                  (a_tomc + b_tomc > c_tomc) && 
+                  (a_tomc + c_tomc > b_tomc) && 
+                  (b_tomc + c_tomc > a_tomc))
+            );
+
+            document.write("Boki trójkąta to: a_tomc=" + a_tomc + ", b_tomc=" + b_tomc + ", c_tomc=" + c_tomc + "<br>");
+        </script>
+    </div>
+</body>
+</html>
