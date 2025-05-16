@@ -1,0 +1,51 @@
+<html>
+<head>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      text-align: center;
+    }
+
+    .train-info {
+      background-color: #fff;
+      border: 1px solid #ccc;
+      padding: 10px;
+      border-radius: 5px;
+      width: 300px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      color: #333;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Train object</h1>
+  <div class="train-info">
+    <script type="text/javascript">
+      var train = {
+        productionYear: 2007,
+        wheelsNumber: 8,
+        color: 'Blue',
+
+        train_wyswietli_Tomcz: function () {
+          document.write(
+            'Product year: ' + this.productionYear + '<br>'
+            + 'Wheels number: ' + this.wheelsNumber + '<br>'
+            + 'Color: ' + this.color + '<br>'
+          );
+        }
+      }
+
+      train.train_wyswietli_Tomcz();
+
+      train.name = "Super Train";
+      train.pokaz_Tomcz = function () { document.write('Train name: ' + this.name); }
+      train.pokaz_Tomcz();
+    </script>
+  </div>
+</body>
+</html>
