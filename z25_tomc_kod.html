@@ -1,0 +1,51 @@
+<html>
+<head>
+  <title> kod zadania 25</title>
+  <meta charset="utf-8">
+  <style>
+    textarea {
+      color: rgb(102, 102, 102);
+      font-size: 15px;
+      resize: none;
+      height: 90vh;
+      width: 90vw;
+    }
+  </style>
+</head>
+<body>
+  <textarea readonly>
+     <html>
+
+    <head>
+      <title>
+        Obliczenia pola i obwodu
+      </title>
+      <script language="JavaScript">
+      </script>
+    </head>
+    
+    <body>
+      <div style="color: rgb(255, 119, 0); background-color: rgb(156, 145, 145 0.33); font-size: 80px;">
+        <script language="JavaScript">
+            const N0 = Number(prompt("N0: "));
+            const t = Number(prompt("t: "));
+            const T_half = Number(prompt("T1/2: "));
+    
+            document.write("N0=" + N0.toFixed(2) + "sztuk" + "<br>");
+            document.write("t=" + t.toFixed(2) + "lat" + "<br>");
+            document.write("T1/2=" + T_half.toFixed(2) + "lat" + "<br>");
+            
+            const lambda = Math.LN2 / T_half;
+            
+            document.write("Lambda = " + lambda.toFixed(7) + " 1/rok" + "<br>");
+    
+            const N = N0 * Math.E**(-lambda * t);
+        
+            document.write("N=" + N.toFixed(7) + "sztuk" + "<br>");
+        </script>
+      </div>
+    </body>
+    </html>
+    </textarea>
+</body>
+</html>
