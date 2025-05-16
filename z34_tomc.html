@@ -1,0 +1,28 @@
+<html>
+<head>
+  <title>Kalkulator Równania Kwadratowego</title>
+  <link rel="stylesheet" href="main.css">
+  <script src="main.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="text-answer">
+      <h1>Kalkulator Równania Kwadratowego</h1>
+      <form action="#" id="form">
+        <input type="number" id="a" placeholder="a" step="0.01">
+        <input type="number" id="b" placeholder="b" step="0.01">
+        <input type="number" id="c" placeholder="c" step="0.01">
+        <button type="submit">Oblicz</button>
+        <button type="reset">Reset</button>
+      </form>
+      <p id="generalForm">Tutaj będzie postać ogólna</p>
+      <p id="canonicalForm">Tutaj będzie postać kanoniczna</p>
+      <p id="multiForm">Tutaj będzie postać iloczynowa</p>
+      <p id="roots">Tutaj będą korzenie</p>
+      <p id="vertex">Tutaj będzie wierzchołek</p>
+      <p id="functionType">Tutaj będą przedziały <br><br></p>
+    </div>
+    <canvas id="graph" width="400" height="400"></canvas>
+  </div>
+</body>
+</html>
