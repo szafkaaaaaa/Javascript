@@ -1,0 +1,31 @@
+<html>
+<head>
+  <title> kod zadania 2</title>
+  <meta charset="utf-8">
+  <style>
+    textarea {
+      color: rgb(102, 102, 102);
+      font-size: 15px;
+      resize: none;
+      height: 90vh;
+      width: 90vw;
+    }
+  </style>
+</head>
+<body>
+  <textarea readonly>
+     <!DOCTYPE html>
+<html lang="pl-PL">
+<HTML>
+ <HEAD>
+ <meta charset="utf-8">
+ <TITLE>SKRYPT zewnętrzny-Tomczak</TITLE>
+</HEAD>
+<BODY>
+ <SCRIPT type="text/javascript" src="z2_tomc_zewnetrzny.js"></SCRIPT>
+ <input type="button" value="zamknij okno" onclick="window.close()"/>
+</BODY>
+</HTML>
+    </textarea>
+</body>
+</html>
