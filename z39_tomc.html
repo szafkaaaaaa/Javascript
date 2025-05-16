@@ -1,0 +1,22 @@
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 39</title>
+</head>
+<body>
+    <h2>Zadanie 39: Rok rozpoczęcia JavaScript</h2>
+    <input type="button" name="zadanie39" value="Sprawdź rok" onclick="zadanie39()" />
+    
+    <script>
+        function zadanie39() {
+            var rok = parseInt(prompt("Podaj rok rozpoczęcia JavaScript:", ""));
+            if (rok === 1995) {
+                document.write('<p style="color: blue; font-size: 4;">Brawo, znasz rok od kiedy działa JavaScript!</p>');
+            } else {
+                document.write('<p style="color: red; font-size: 7;">Źle, musisz jeszcze poczytać</p>');
+            }
+            document.write('<p style="color: black; font-size: 3;">Wczytany rok = ' + rok + '</p>');
+        }
+    </script>
+</body>
+</html>
