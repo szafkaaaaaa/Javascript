@@ -1,0 +1,185 @@
+<html>
+<head>
+  <title>Programowanie - Pytania i Odpowiedzi</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      line-height: 1.6;
+      padding: 20px;
+    }
+
+    .container {
+      width: 80%;
+      margin: auto;
+      overflow: hidden;
+    }
+
+    .question {
+      background: #333;
+      color: #fff;
+      padding: 10px;
+      margin: 5px 0;
+      font-size: 20px;
+    }
+
+    .answer {
+      background: #f8f8f8;
+      padding: 10px;
+      margin-bottom: 20px;
+      border-left: 3px solid #0077cc;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Programowanie - Pytania i Odpowiedzi</h1>
+
+    <div class="question-answer">
+      <h2 class="question">1. W jaki sposób można określić właściwość danego obiektu ( dwa sposoby wraz z przykładami)?
+      </h2>
+      <div class="answer">
+        <p>Odpowiedź:</p>
+        <p>1. Za pomocą notacji kropkowej:</p>
+        <pre>
+                const person = {
+                    name: 'John',
+                    age: 30
+                };
+                console.log(person.<strong>name</strong>); // Wyświetli: John
+            </pre>
+        <p>2. Za pomocą notacji nawiasów kwadratowych:</p>
+        <pre>
+                const person = {
+                    name: 'John',
+                    age: 30
+                };
+                console.log(person[<strong>'age'</strong>]); // Wyświetli: 30
+            </pre>
+      </div>
+    </div>
+
+    <div class="question-answer">
+      <h2 class="question">2. W jaki sposób można odwołać się do pól (właściwości) i metod?</h2>
+      <div class="answer">
+        <p>Odpowiedź:</p>
+        <p>Do pól obiektu odwołujemy się za pomocą notacji kropkowej lub nawiasów kwadratowych, jak pokazano w
+          przykładach wyżej. Do metod obiektu również odwołujemy się za pomocą notacji kropkowej lub nawiasów
+          kwadratowych, podając nazwę metody i wywołując ją, np. obiekt.<strong>metoda()</strong>.</p>
+      </div>
+    </div>
+
+    <div class="question-answer">
+      <h2 class="question">3. Wymień cechy charakterystyczne konstruktora.</h2>
+      <div class="answer">
+        <p>Odpowiedź:</p>
+        <p>Cechy charakterystyczne konstruktora to:</p>
+        <ul>
+          <li>Konstruktor jest funkcją używaną do tworzenia nowych obiektów.</li>
+          <li>Nazwa konstruktora zazwyczaj zaczyna się wielką literą.</li>
+          <li>Konstruktor może przyjmować argumenty i inicjować właściwości obiektu.</li>
+          <li>Konstruktor może definiować metody, które będą dostępne dla wszystkich obiektów utworzonych przy użyciu
+            tego konstruktora.</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="question-answer">
+      <h2 class="question">4. Konstruowanie obiektu na podstawie przykładu (obiekt ma trzy pola oraz jedną metodę).</h2>
+      <div class="answer">
+        <p>Odpowiedź:</p>
+        <p>Oto przykład konstruowania obiektu na podstawie przykładu:</p>
+        <pre>
+          function Person(name, age, city) {
+              this.name = name;
+              this.age = age;
+              this.city = city;
+              this.sayHello = function() {
+                  console.log(`Hello, my name is ${this.name}, I am ${this.age} years old, and I live in ${this.city}.`);
+              };
+          }
+
+          const john = new Person('John', 30, 'New York');
+          john.<strong>sayHello()</strong>; // Wywołanie metody sayHello dla obiektu "john"
+      </pre>
+      </div>
+    </div>
+
+    <div class="question-answer">
+      <h2 class="question">5. Znaczenie słowa "this". Jak oddzielamy pola oraz metody?</h2>
+      <div class="answer">
+        <p>Odpowiedź:</p>
+        <p>Słowo "<strong>this</strong>" odnosi się do bieżącego obiektu w kontekście, w którym jest używane. Oddzielamy
+          pola oraz metody, używając "<strong>this.</strong>" przed ich nazwami. Na przykład:</p>
+        <pre>
+          function Person(name, age) {
+              this.<strong>name</strong> = name; // Pole
+              this.<strong>age</strong> = age;   // Pole
+              this.<strong>sayHello</strong> = function() {
+                  console.log(`Hello, my name is ${this.name} and I am ${this.age} years old.`);
+              }; // Metoda
+          }
+      </pre>
+      </div>
+    </div>
+
+    <div class="question-answer">
+      <h2 class="question">6. Konstruktor w JS na podstawie przykładu wraz z opisem.</h2>
+      <div class="answer">
+        <p>Odpowiedź:</p>
+        <p>Oto przykład konstruktora w JavaScript:</p>
+        <pre>
+          function Car(make, model, year) {
+              this.<strong>make</strong> = make;
+              this.<strong>model</strong> = model;
+              this.<strong>year</strong> = year;
+              this.<strong>drive</strong> = function() {
+                  console.log(`Driving the ${this.year} ${this.make} ${this.model}.`);
+              };
+          }
+
+          const myCar = new Car('Toyota', 'Camry', 2023);
+          myCar.<strong>drive()</strong>; // Wywołanie metody drive dla obiektu "myCar"
+      </pre>
+        <p>Konstruktor "<strong>Car</strong>" służy do tworzenia obiektów reprezentujących samochody. Przyjmuje trzy
+          argumenty - markę, model i rok, a następnie inicjuje właściwości obiektu.</p>
+      </div>
+    </div>
+
+    <div class="question-answer">
+      <h2 class="question">7. Znaczenie słowa kluczowego "new" wraz z przykładem.</h2>
+      <div class="answer">
+        <p>Odpowiedź:</p>
+        <p>Słowo kluczowe "<strong>new</strong>" jest używane przed wywołaniem konstruktora i tworzy nowy obiekt na jego
+          podstawie. Oto przykład:</p>
+        <pre>
+          const myCar = <strong>new</strong> Car('Toyota', 'Camry', 2023);
+      </pre>
+        <p>Przy użyciu słowa kluczowego "<strong>new</strong>" tworzony jest nowy obiekt "myCar" na podstawie
+          konstruktora "Car".</p>
+      </div>
+    </div>
+
+    <div class="question-answer">
+      <h2 class="question">8. Znaczenie słowa kluczowego "prototype" wraz z przykładem i opisem.</h2>
+      <div class="answer">
+        <p>Odpowiedź:</p>
+        <p>Słowo kluczowe "<strong>prototype</strong>" w JavaScript jest używane w kontekście dziedziczenia i umożliwia
+          dodawanie metod i właściwości do prototypu obiektu. Jest szczególnie ważne w przypadku współdzielenia metod
+          między wieloma instancjami obiektów. Oto przykład:</p>
+        <pre>
+          Car.<strong>prototype</strong>.startEngine = function() {
+              console.log('Starting the engine...');
+          };
+      </pre>
+        <p>Dodanie metody "startEngine" do prototypu "Car" pozwala na dostęp do tej metody przez wszystkie obiekty
+          stworzone na podstawie konstruktora "Car".</p>
+      </div>
+    </div>
+
+  </div>
+
+</body>
+
+</html>
