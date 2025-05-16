@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title> kod zadania 16</title>
+  <meta charset="utf-8">
+  <style>
+    textarea {
+      color: rgb(102, 102, 102);
+      font-size: 15px;
+      resize: none;
+      height: 90vh;
+      width: 90vw;
+    }
+  </style>
+</head>
+<body>
+  <textarea readonly>
+     <!DOCTYPE html>
+<html>
+  <head>
+    <title> proste obliczenia</title>
+    <meta charset="utf-8">
+  </head>
+  <body>
+    <div style="color:green; font-size:50px;">
+    <script language="JavaScript">
+        const aTom = Number(prompt("A=" + ""));
+        const bTom = Number(prompt("B=" + ""));
+
+        const result = aTom**3 + 3*aTom**2*bTom + 3*aTom*bTom**2 + bTom**3;
+
+        document.write("Wczytane liczby: A=" + aTom + " B=" + bTom + "<br>");
+        document.write(
+          '(' + aTom + ' + ' + bTom + ')^3 = ' +
+          aTom + '^3 + 3*' + aTom + '^2*' + bTom + ' + 3*' + 
+          aTom + '*' + bTom + '^2 + ' + bTom + '^3 = ' +
+          result
+        );
+
+    </script>
+    </div>
+    <input type="button" value="zamknij okno" onclick="window.close()"/>
+  </body>
+</html>
+    </textarea>
+</body>
+</html>
