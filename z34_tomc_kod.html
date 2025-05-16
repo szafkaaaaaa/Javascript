@@ -1,0 +1,168 @@
+<html>
+<head>
+  <title> kod zadania 34</title>
+  <meta charset="utf-8">
+  <style>
+    textarea {
+      color: rgb(102, 102, 102);
+      font-size: 15px;
+      resize: none;
+      height: 90vh;
+      width: 90vw;
+    }
+  </style>
+</head>
+<body>
+  <h1>z40_tomc.html</h1>
+  <textarea readonly>
+<html>
+<head>
+  <title>Kalkulator Równania Kwadratowego</title>
+  <link rel="stylesheet" href="main_z34.css">
+  <script src="main_z34.js" defer></script>
+</head>
+<body>
+  <div class="container">
+    <div class="text-answer">
+      <h1>Kalkulator Równania Kwadratowego</h1>
+      <form action="#" id="form">
+        <input type="number" id="a" placeholder="a" step="0.01">
+        <input type="number" id="b" placeholder="b" step="0.01">
+        <input type="number" id="c" placeholder="c" step="0.01">
+        <button type="submit">Oblicz</button>
+        <button type="reset">Reset</button>
+      </form>
+      <p id="generalForm">Tutaj będzie postać ogólna</p>
+      <p id="canonicalForm">Tutaj będzie postać kanoniczna</p>
+      <p id="multiForm">Tutaj będzie postać iloczynowa</p>
+      <p id="roots">Tutaj będą korzenie</p>
+      <p id="vertex">Tutaj będzie wierzchołek</p>
+      <p id="functionType">Tutaj będą przedziały <br><br></p>
+    </div>
+    <canvas id="graph" width="400" height="400"></canvas>
+  </div>
+</body>
+</html>
+    </textarea>
+  <h1>main_34.css</h1>
+  <textarea readonly>
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f0f0f0;
+}
+
+.container {
+  display: flex;
+  gap: 50px;
+  justify-content: space-around;
+
+  text-align: center;
+}
+
+canvas {
+  border: 1px solid black;
+  background-color: #fff;
+}
+    </textarea>
+  <h1>main_z34.js</h1>
+  <textarea readonly>
+const form = document.getElementById('form');
+
+form.addEventListener('submit', (event) => {
+  event.preventDefault();
+  calculate();
+});
+
+function calculate() {
+  const a = parseFloat(document.getElementById('a').value) || 1;
+  const b = parseFloat(document.getElementById('b').value);
+  const c = parseFloat(document.getElementById('c').value);
+
+  const multiFormElement = document.getElementById('multiForm');
+  const generalFormElement = document.getElementById('generalForm');
+  const canonicalFormElement = document.getElementById('canonicalForm');
+  const roots = document.getElementById('roots');
+  const functionType = document.getElementById('functionType');
+  const vertexElement = document.getElementById('vertex');
+
+  const discriminant = b ** 2 - 4 * a * c;
+  let root1, root2;
+
+  if (discriminant > 0) {
+    root1 = (-b + Math.sqrt(discriminant)) / (2 * a);
+    root2 = (-b - Math.sqrt(discriminant)) / (2 * a);
+
+    roots.innerHTML = 'Korzenie: ' + root1.toFixed(2) + ', ' + root2.toFixed(2);
+  } else if (discriminant == 0) {
+    root1 = root2 = -b / (2 * a);
+
+    roots.innerHTML = 'Korzeń: ' + root1.toFixed(2);
+  } else {
+
+    roots.innerHTML = 'Brak rzeczywistych korzeni';
+  }
+
+  if (discriminant >= 0) {
+    multiFormElement.innerHTML = `Postać iloczyniowa: ${a}*(x - ${root1.toFixed(2)})*(x - ${root2.toFixed(2)})`;
+  } else {
+    multiFormElement.innerHTML = 'Postać iloczyniowa: Brak (discriminant < 0)';
+  }
+
+  const vertexX = -b / (2 * a);
+  const vertexY = -discriminant / (4 * a);
+  vertexElement.innerHTML = `Wierzchołek: (${vertexX.toFixed(2)}, ${vertexY.toFixed(2)})`;
+
+  if (a > 0) {
+    functionType.innerHTML = `Funkcja malejąca w przedziale: [-∞; ${vertexX}]<br>Funkcja rosnąca w przedziale: [${vertexX}; ∞]`;
+  } else {
+    functionType.innerHTML = `Funkcja rosnąca w przedziale: [-∞; ${vertexX}]<br>Funkcja malejąca w przedziale: [${vertexX}; ∞]`;
+  }
+
+  generalFormElement.innerHTML = `Postać ogólna: ${a}x^2 + ${b}x + ${c}`;
+
+  const p = -b / (2 * a);
+  const q = -discriminant / (4 * a);
+  canonicalFormElement.innerHTML = `Postać kanoniczna: ${a}(x - ${p.toFixed(2)})^2 + ${q.toFixed(2)}`;
+
+  drawGraph(a, b, c);
+}
+
+function drawGraph(a, b, c) {
+  const canvas = document.getElementById('graph');
+  let context = canvas.getContext('2d');
+
+  context.clearRect(0, 0, canvas.width, canvas.height);
+
+  drawAxes(context);
+  drawParabola(context, a, b, c);
+}
+
+function drawAxes(context) {
+  context.beginPath();
+  context.moveTo(0, 200);
+  context.lineTo(400, 200);
+  context.stroke();
+
+  context.beginPath();
+  context.moveTo(200, 0);
+  context.lineTo(200, 400);
+  context.stroke();
+}
+
+function drawParabola(context, a, b, c) {
+  context.beginPath();
+  for (let x = -20; x < 20; x += 0.1) {
+    const y = a * x ** 2 + b * x + c;
+    context.lineTo(200 + 10 * x, 200 - 10 * y);
+  }
+  context.stroke();
+}
+    </textarea>
+</body>
+</html>
