@@ -1,0 +1,154 @@
+<html>
+<head>
+  <title> kod zadania 26</title>
+  <meta charset="utf-8">
+  <style>
+    textarea {
+      color: rgb(102, 102, 102);
+      font-size: 15px;
+      resize: none;
+      height: 90vh;
+      width: 90vw;
+    }
+  </style>
+</head>
+<body>
+  <textarea readonly>
+     <html>
+
+<head>
+  <title>
+    Obliczenia pola i obwodu
+  </title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+    }
+  
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+    }
+  
+    form {
+      text-align: center;
+      margin: 20px;
+    }
+  
+    label {
+      display: block;
+      margin-bottom: 10px;
+    }
+  
+    input[type="number"] {
+      width: 100px;
+      padding: 5px;
+      font-size: 16px;
+    }
+  
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 50%;
+    }
+  
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+  
+    th {
+      background-color: #007bff;
+      color: #fff;
+    }
+  </style>
+  <script language="JavaScript">
+    function poleMysiv(aTom, bTom, hTom) {
+      return ((aTom + bTom) * hTom) / 2;
+    }
+
+    function obwodMysiv(aTom, bTom, hTom) {
+      const biggestSide = Math.max(aTom, bTom);
+      const smallestSide = Math.min(aTom, bTom);
+
+      const cTriangle = (biggestSide - smallestSide) / 2;
+
+      const cTom = Math.sqrt(hTom**2 + cTriangle**2) 
+
+      return 2 * cTom + aTom + bTom;
+    }
+
+    function calcPoleObwod(event) {
+      event.preventDefault();
+
+      const aTom = parseFloat(document.querySelector('[name="a_dana_tom"]').value);
+      const bTom = parseFloat(document.querySelector('[name="b_dana_tom"]').value);
+      const hTom = parseFloat(document.querySelector('[name="h_dana_tom"]').value);
+
+      const pole = poleTomcz(aTom, bTom, hTom);
+      const obwod = obwodTomcz(aTom, bTom, hTom);
+
+      const poleOutput = document.querySelector('#wyprowadz_pole');
+      const obwodOutput = document.querySelector('#wyprowadz_obwod');
+
+      poleOutput.textContent = pole.toFixed(2);
+      obwodOutput.textContent = obwod.toFixed(2);
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Obliczenia obwodu i pola prostokąta</h1>
+  <br> <br>
+  <form name="formularz" action="#" onsubmit="calcPoleObwod(event); return false;">
+    <label>
+      Podaj a=
+      <input type="number" step="0.001" name="a_dana_tom">
+    </label>
+
+    <label>
+      Podaj b=
+      <input type="number" step="0.001" name="b_dana_tom">
+    </label>
+
+    <label>
+      Podaj h=
+      <input type="number" step="0.001" name="h_dana_tom">
+    </label>
+
+    <input TYPE="submit" Value="oblicz">
+  </form>
+
+  <table>
+    <tr>
+      <th>Pole = </th>
+      <td id="wyprowadz_pole"></td>
+    </tr>
+    <tr>
+      <th>Obwod = </th>
+      <td id="wyprowadz_obwod"></td>
+    </tr>
+  </table>
+</body>
+
+</html>
+    </textarea>
+</body>
+</html>
