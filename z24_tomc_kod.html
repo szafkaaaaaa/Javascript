@@ -1,0 +1,74 @@
+<html>
+<head>
+  <title> kod zadania 24</title>
+  <meta charset="utf-8">
+  <style>
+    textarea {
+      color: rgb(102, 102, 102);
+      font-size: 15px;
+      resize: none;
+      height: 90vh;
+      width: 90vw;
+    }
+  </style>
+</head>
+<body>
+  <textarea readonly>
+     <html>
+<head>
+  <title>
+    Obliczenia pola i obwodu
+  </title>
+  <script language="JavaScript">
+    function calcHypotenus(d, x) {
+      return Math.sqrt(d ** 2 + x ** 2);
+    }
+
+    function findAngle(d, x) {
+      const radian = Math.atan(d / x);
+      const degree = radian * (180 / Math.PI);
+      return degree;
+    }
+
+    function calcHypoAngle(event) {
+      event.preventDefault();
+
+      const d = parseFloat(document.querySelector('[name="D"]').value);
+      const x = parseFloat(document.querySelector('[name="X"]').value);
+
+      const hypo = calcHypotenus(d, x);
+      const alfa = findAngle(d, x);
+
+      const poleOutput = document.querySelector('#wyprowadz_drabina');
+      const obwodOutput = document.querySelector('#wyprowadz_alfa');
+
+      poleOutput.textContent = hypo.toFixed(2);
+      obwodOutput.textContent = alfa.toFixed(2);
+    }
+  </script>
+</head>
+
+<body>
+  <div style="color: blue; background-color: lightgray;">
+    <script language="JavaScript">
+      const x1 = Number(prompt("x1=" + ""));
+      const x2 = Number(prompt("x2=" + ""));
+    
+      const x1Radian = x1 * (Math.PI / 180);
+      const lettersAmount = 10;
+      const y1 = 3 * x1 * lettersAmount/(lettersAmount + 2);
+      const y2 = 2 * Math.cos(x1Radian) + 3 * Math.sin(x1Radian);
+      const y3 = Math.cbrt(x1**5 + 2 * x2**4) * Math.abs(x1 - x2);
+
+      document.write("x1=" + x1.toFixed(2) + " ".repeat(5) + "x2=" + x2.toFixed(2) + " ".repeat(5) + "<br>");
+      document.write("x1=" + x1.toFixed(2) + " ".repeat(5) + "x1=" + x1Radian.toFixed(2) + " ".repeat(5) + "<br>");
+      document.write("y1=" + y1.toFixed(2) + "<br>");
+      document.write("y2=" + y2.toFixed(2) + "<br>");
+      document.write("y3=" + y3.toFixed(2) + "<br>");
+    </script>
+  </div>
+</body>
+</html>
+    </textarea>
+</body>
+</html>
