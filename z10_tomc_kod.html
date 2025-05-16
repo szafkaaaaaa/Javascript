@@ -1,0 +1,40 @@
+<html>
+<head>
+  <title> kod zadania 2</title>
+  <meta charset="utf-8">
+  <style>
+    textarea {
+      color: rgb(102, 102, 102);
+      font-size: 15px;
+      resize: none;
+      height: 90vh;
+      width: 90vw;
+    }
+  </style>
+</head>
+<body>
+  <textarea readonly>
+     <!DOCTYPE html>
+      <html>
+      <head>
+        <title> proste obliczenia</title>
+        <meta charset="utf-8">
+      </head>
+      <body>
+        <div style="color:red;font-size:50px;">
+          <script language="JavaScript">
+            var liczba1 = prompt("liczba1=", "");
+            var liczba2 = prompt("liczba2=", "");
+            var suma;
+            var a = parseFloat(liczba1);
+            var b = parseFloat(liczba2);
+            suma = a + b;
+            document.write("suma=" + a + " + " + b + " = " + suma + "<br>");
+          </script>
+        </div>
+        <input type="button" value="zamknij okno" onclick="window.close()" />
+      </body>
+      </html>
+    </textarea>
+</body>
+</html>
