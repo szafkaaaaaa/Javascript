@@ -1,0 +1,44 @@
+<html>
+<head>
+  <title> kod zadania 19</title>
+  <meta charset="utf-8">
+  <style>
+    textarea {
+      color: rgb(102, 102, 102);
+      font-size: 15px;
+      resize: none;
+      height: 90vh;
+      width: 90vw;
+    }
+  </style>
+</head>
+<body>
+  <textarea readonly>
+      <html>
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="styl.css">
+</head>
+<body>
+  <script type="text/javascript">
+    function pole_tomcz() {
+      var a_tom = parseFloat(document.getElementById('dlugosc').value);
+      var b_tom = a_tom * a_tom;
+      document.getElementById("nazwa").innerHTML = "Pole kwadratu= " + b_tom.toFixed(2) + " cm^2";
+    }
+    function obwod_tomcz() {
+      var a = parseFloat(document.getElementById('dlugosc').value);
+      var b = 4 * a;
+      document.getElementById("nazwa").innerHTML = "Obwód kwadratu= " + b.toFixed(2) + " cm";
+    }
+  </script>
+  <h1>Wszystko o KWADRACIE</h1><br><br>
+  Podaj długość boku: <input type="text" id="dlugosc" placeholder="podaj długość"> cm<br><br><br>
+  <input type="button" name="pole" value="Oblicz pole" Onclick="pole_tomcz()"><br><br>
+  <input type="button" name="obwod" value="Oblicz obwod" Onclick="obwod_tomcz()"><br><br>
+  <div style="color:red;font-size:50px;" id="nazwa"></div>
+</body>
+</html>
+    </textarea>
+</body>
+</html>
