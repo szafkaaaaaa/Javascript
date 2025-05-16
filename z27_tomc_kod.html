@@ -1,0 +1,162 @@
+<html>
+<head>
+  <title> kod zadania 27</title>
+  <meta charset="utf-8">
+  <style>
+    textarea {
+      color: rgb(102, 102, 102);
+      font-size: 15px;
+      resize: none;
+      height: 90vh;
+      width: 90vw;
+    }
+  </style>
+</head>
+<body>
+  <textarea readonly>
+     <html>
+<head>
+  <title>
+    Obliczenia pola i obwodu
+  </title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      margin: 0;
+      padding: 0;
+    }
+  
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      color: #333;
+      font-size: 24px;
+    }
+  
+    form {
+      text-align: center;
+      margin: 20px auto;
+      width: 300px;
+      background-color: #fff;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+  
+    label {
+      display: block;
+      margin-bottom: 10px;
+      font-weight: bold;
+      color: #555;
+    }
+  
+    input[type="number"] {
+      width: 100%;
+      padding: 10px;
+      font-size: 16px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      margin-bottom: 15px;
+    }
+  
+    input[type="submit"] {
+      background-color: #007bff;
+      color: #fff;
+      border: none;
+      padding: 10px 20px;
+      font-size: 18px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+  
+    input[type="submit"]:hover {
+      background-color: #0056b3;
+    }
+  
+    table {
+      margin: 20px auto;
+      border-collapse: collapse;
+      width: 50%;
+      background-color: #fff;
+      border-radius: 5px;
+      box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    }
+  
+    th, td {
+      border: 1px solid #ddd;
+      padding: 8px;
+      text-align: center;
+    }
+  
+    th {
+      background-color: #007bff;
+      color: #fff;
+    }
+  
+    #wyprowadz_h, #wyprowadz_kat {
+      font-weight: bold;
+      font-size: 18px;
+    }
+  </style>
+  <script language="JavaScript">
+    function heightTomcz(odl, s) {
+      return Math.sqrt(s**2 - odl**2);
+    }
+
+    function angleTomcz(odl, s) {
+      const radian = Math.acos(odl / s);
+      return radian * (180 / Math.PI);
+    }
+
+    function calcPoleObwod(event) {
+      event.preventDefault();
+
+      const odl_Tom = parseFloat(document.querySelector('[name="odl_dana_tom"]').value);
+      const s_Tom = parseFloat(document.querySelector('[name="s_dana_tom"]').value);
+
+      const pole = heightTomcz(odl_Tom, s_Tom);
+      const obwod = angleTomcz(odl_Tom, s_Tom);
+
+      const heightOutput = document.querySelector('#wyprowadz_h');
+      const angleOutput = document.querySelector('#wyprowadz_kat');
+
+      heightOutput.textContent = pole.toFixed(2);
+      angleOutput.textContent = obwod.toFixed(2);
+    }
+  </script>
+</head>
+
+<body>
+  <h1>Obliczenia obwodu i pola prostokąta</h1>
+  <br> <br>
+  <form name="formularz" action="#" onsubmit="calcPoleObwod(event); return false;">
+    <label>
+      Podaj odleglosc:
+      <input type="number" step="0.001" name="odl_dana_tom">
+    </label>
+
+    <label>
+      Podaj s:
+      <input type="number" step="0.001" name="s_dana_tom">
+    </label>
+
+    <input TYPE="submit" Value="oblicz">
+  </form>
+
+  <table>
+    <tr>
+      <th>Wysokość: </th>
+      <td id="wyprowadz_h"></td>
+    </tr>
+    <tr>
+      <th>Kąt startu: </th>
+      <td id="wyprowadz_kat"></td>
+    </tr>
+  </table>
+</body>
+
+</html>
+    </textarea>
+</body>
+</html>
