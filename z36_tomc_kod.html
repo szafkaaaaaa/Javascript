@@ -1,0 +1,45 @@
+<html>
+<head>
+  <title> kod zadania 36</title>
+  <meta charset="utf-8">
+  <style>
+    textarea {
+      color: rgb(102, 102, 102);
+      font-size: 15px;
+      resize: none;
+      height: 90vh;
+      width: 90vw;
+    }
+  </style>
+</head>
+<body>
+  <textarea readonly>
+     <html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 36</title>
+</head>
+<body>
+    <h1 style="color: green;">MENU:</h1>
+    <p style="color: red;">1 - CZERWONY</p>
+    <p style="color: blue;">2 - NIEBIESKI</p>
+    <input type="button" name="zadanie36" value="Oblicz" onclick="zadanie36()" />
+    
+    <script>
+        function zadanie36() {
+            var x = prompt("Podaj kolor (1, 2, czerwony, niebieski):", "").toLowerCase();
+
+            if (x == "1" || x == "czerwony") {
+                document.write('<h1 style="color: red; font-size: 7;">Wczytałeś kolor czerwony</h1><br />');
+            } else if (x == "2" || x == "niebieski") {
+                document.write('<h6 style="color: blue; font-size: 1;">Wczytałeś kolor niebieski</h6><br />');
+            } else {
+                document.write('<p style="color: black; font-size: 3;">Nieprawidłowy wybór!</p>');
+            }
+        }
+    </script>
+</body>
+</html>
+    </textarea>
+</body>
+</html>
