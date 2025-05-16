@@ -1,0 +1,46 @@
+<html>
+<head>
+  <title> kod zadania 40</title>
+  <meta charset="utf-8">
+  <style>
+    textarea {
+      color: rgb(102, 102, 102);
+      font-size: 15px;
+      resize: none;
+      height: 90vh;
+      width: 90vw;
+    }
+  </style>
+</head>
+<body>
+  <textarea readonly>
+     <html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 40</title>
+</head>
+<body>
+    <h2>Zadanie 40: Operacje matematyczne</h2>
+    <input type="button" name="zadanie40" value="Oblicz różnicę" onclick="roznica_tom()" />
+    <input type="button" name="zadanie40" value="Oblicz iloczyn" onclick="iloczyn_tom()" />
+    
+    <script>
+        function roznica_tom() {
+            var a = parseFloat(prompt("Podaj pierwszą liczbę:", ""));
+            var b = parseFloat(prompt("Podaj drugą liczbę:", ""));
+            var wynik = a - b;
+            document.write('<p style="color: green; font-size: 4;">Różnica wynosi: ' + wynik + '</p>');
+        }
+
+        function iloczyn_tom() {
+            var a = parseFloat(prompt("Podaj pierwszą liczbę:", ""));
+            var b = parseFloat(prompt("Podaj drugą liczbę:", ""));
+            var wynik = a * b;
+            document.write('<p style="color: blue; font-size: 4;">Iloczyn wynosi: ' + wynik + '</p>');
+        }
+    </script>
+</body>
+</html>
+    </textarea>
+</body>
+</html>
