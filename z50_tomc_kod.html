@@ -1,0 +1,48 @@
+<html>
+<head>
+  <title> kod zadania 2</title>
+  <meta charset="utf-8">
+  <style>
+    textarea {
+      color: rgb(102, 102, 102);
+      font-size: 15px;
+      resize: none;
+      height: 90vh;
+      width: 90vw;
+    }
+  </style>
+</head>
+<body>
+  <textarea readonly>
+     <!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 50</title>
+    <style>
+        h1 {
+            color: red;
+            margin-left: 2cm;
+        }
+        h2 {
+            color: blue;
+            margin-left: 5mm;
+        }
+    </style>
+</head>
+<body>
+    <h1>Tymon Tomczak</h1>
+    <h2>Wyprowadzanie liczb od 1 do 10</h2>
+    <pre id="output"></pre>
+    <script>
+        let output = '';
+        for (let i = 1; i <= 10; i++) {
+            output += ' '.repeat(i) + i + '\n';
+        }
+        document.getElementById('output').textContent = output;
+    </script>
+</body>
+</html>
+    </textarea>
+</body>
+</html>
