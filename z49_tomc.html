@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 49</title>
+</head>
+<body>
+    <h1>Obliczanie silni</h1>
+    <label for="n_tom">Podaj n:</label>
+    <input type="number" id="n_tom" min="0">
+    <button onclick="obliczSilnia()">Oblicz</button>
+    <p id="result"></p>
+    <script>
+        function obliczSilnia() {
+            const n_tom = parseInt(document.getElementById('n_tom').value);
+            if (isNaN(n_tom) || n_tom < 0) {
+                alert('Podaj poprawną liczbę!');
+                return;
+            }
+            let silnia_tom = 1;
+            for (let i = 1; i <= n_tom; i++) {
+                silnia_tom *= i;
+            }
+            document.getElementById('result').textContent = `${n_tom}! = ${silnia_tom}`;
+        }
+    </script>
+</body>
+</html>
