@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Zadanie 48</title>
+</head>
+<body>
+    <h1>Suma szeregu harmonicznego</h1>
+    <p id="result"></p>
+    <script>
+        let suma_tom = 0;
+        for (let iloczyn_tom = 1; iloczyn_tom <= 1000000; iloczyn_tom++) {
+            suma_tom += 1 / iloczyn_tom;
+        }
+        document.getElementById('result').textContent = `Suma szeregu harmonicznego: ${suma_tom}`;
+    </script>
+</body>
+</html>
