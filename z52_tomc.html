@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+  <title>Rysowanie prostokąta - Tomczak</title>
+  <style>
+    pre {
+      font-family: monospace;
+      font-size: 16px;
+      line-height: 1;
+    }
+  </style>
+</head>
+<body>
+
+<div style="font-size:2cm; color:red;">
+  Tomczak
+</div>
+<div style="font-size:5mm; color:blue;">
+  Temat: Użycie pętli for do rysowania prostokąta z gwiazdek
+</div>
+
+<pre>
+<script>
+ 
+  let a_tom = (7 % 4) + 5; 
+  let b_tom = (5 % 6) + 20; 
+
+  
+  for (let i_tom = 1; i_tom <= b_tom; i_tom++) {
+    document.write("*");
+  }
+  document.write("<br>");
+
+
+  for (let j_tom = 1; j_tom <= a_tom - 2; j_tom++) {
+    document.write("*");
+    for (let k_tom = 1; k_tom <= b_tom - 2; k_tom++) {
+      document.write(" ");
+    }
+    document.write("*<br>");
+  }
+
+
+  for (let i_tom = 1; i_tom <= b_tom; i_tom++) {
+    document.write("*");
+  }
+</script>
+</pre>
+</body>
+</html>
