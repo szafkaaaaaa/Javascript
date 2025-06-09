@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Liczby pierwsze z wzoru Eulera</title>
+</head>
+<body>
+
+<script>
+    let linia = 0;
+
+    for (let i = 0; i < 40; i++) {
+        let wynik = i * i + i + 41;
+        document.write("i=" + i + " w(" + i + ")=" + wynik + "<br>");
+        linia++;
+
+       
+        if (linia % 5 === 0) {
+           
+            let kontynuuj = confirm("Kliknij OK, aby kontynuować...");
+            if (!kontynuuj) {
+                break;
+            }
+        }
+    }
+</script>
+
+</body>
+</html>
