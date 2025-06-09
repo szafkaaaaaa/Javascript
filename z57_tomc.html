@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Pierwiastki liczb</title>
+</head>
+<body>
+<script>
+  
+    var numer = parseInt(prompt("Podaj swój numer z dziennika:"));
+
+    var licznik = 0;
+
+    for (var i = numer; i <= numer + 15; i++) {
+        var pierw2 = Math.sqrt(i).toFixed(2);
+        var pierw4 = Math.sqrt(Math.sqrt(i)).toFixed(2);
+
+        document.write("i=" + i + " pierw_2(" + i + ")=" + pierw2 + " pierw_4(" + i + ")=" + pierw4 + "<br>");
+        
+        licznik++;
+       
+        if (licznik % 3 === 0) {
+            let dalej = confirm("Kliknij OK, aby kontynuować...");
+            if (!dalej) {
+                break;
+            }
+        }
+    }
+</script>
+</body>
+</html>
