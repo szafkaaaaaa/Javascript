@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Pętle w JavaScript</title>
+</head>
+<body>
+  <h1>Pętle w JavaScript</h1>
+  <div id="petle"></div>
+
+  <script>
+    const petle = [
+      {
+        nazwa: "Pętla for",
+        konstrukcja: "for (let i = 0; i < 10; i++) {\n  // kod\n}",
+        opis: "Pętla for wykonuje się określoną liczbę razy – znana liczba iteracji.",
+        obraz: "for.png"
+      },
+      {
+        nazwa: "Pętla while (kontrolowane wejście)",
+        konstrukcja: "while (warunek) {\n  // kod\n}",
+        opis: "Sprawdza warunek przed wykonaniem. Jeśli warunek jest fałszywy – pętla się nie wykona.",
+        obraz: "whi.png"
+      },
+      {
+        nazwa: "Pętla do...while (kontrolowane wyjście)",
+        konstrukcja: "do {\n  // kod\n} while (warunek);",
+        opis: "Ciało pętli wykona się przynajmniej raz – warunek sprawdzany jest po wykonaniu.",
+        obraz: "do whi.png"
+      }
+    ];
+
+    const div = document.getElementById("petle");
+
+    petle.forEach(p => {
+      div.innerHTML += "<h2>" + p.nazwa + "</h2>";
+      div.innerHTML += "<pre>" + p.konstrukcja + "</pre>";
+      div.innerHTML += "<p>" + p.opis + "</p>";
+      div.innerHTML += "<img src='" + p.obraz + "' alt='Schemat " + p.nazwa + "' width='300'><hr>";
+    });
+  </script>
+</body>
+</html>
