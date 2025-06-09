@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <title>Imię i nazwisko na przemian</title>
+</head>
+<body>
+  <script>
+  
+    const nazwisko = "Tomczak";
+    const imie = "Tymon";
+    
+ 
+    const liczba_liter_nazwiska = nazwisko.length;
+    const ilosc_wykonan_petli_tom = (liczba_liter_nazwiska % 4) + 10; 
+    const wielkosc_liter_tom = (liczba_liter_nazwiska % 3) + 40;       
+
+  
+    document.write("<div style='font-size:20px; color:blue;'>");
+    document.write("Ilość wykonania pętli = " + ilosc_wykonan_petli_tom + "<br>");
+    document.write("Wielkość liter = " + wielkosc_liter_tom + "px<br><br>");
+    document.write("</div>");
+
+  
+    document.write("<div style='color:red; font-size:" + wielkosc_liter_tom + "px;'>");
+    for (let i_tom = 1; i_tom <= ilosc_wykonan_petli_tom; i_tom++) {
+      if (i_tom % 2 !== 0) {
+        document.write(i_tom + ": " + nazwisko + "<br>");
+      } else {
+        document.write(i_tom + ": " + imie + "<br>");
+      }
+    }
+    document.write("</div>");
+  </script>
+</body>
+</html>
